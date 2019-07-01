@@ -5,14 +5,15 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
+import { showProjects } from '../../store/actions/projectActions';
 
 class Dashboard extends Component {
+  componentWillMount() {
+    this.props.showProjects();
+  }
   render(){
-
     const { projects, auth, notifications } = this.props;
-
     if (!auth.uid) return <Redirect to="/ingresar" />
-
     return (
       <div className="dashboard container">
       	<div className="row">
@@ -38,7 +39,7 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-  connect(mapStateToProps),
+  connect(mapStateToProps, { showProjects }),
   firestoreConnect([
     { collection: 'projects', orderBy:['createdAt', 'desc']},
     { collection: 'notifications', limit:3, orderBy:['time', 'desc'] }

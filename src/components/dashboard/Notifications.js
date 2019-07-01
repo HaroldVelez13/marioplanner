@@ -5,11 +5,11 @@ import fungus from '../../fungus.gif';
 const Notifications = (props) => {
 	const {notifications} = props;
 	return(
-		<div className="section">
+		<div className="section toggle-base">
 			<div className="card zdepth-0">
 				<div className="card-content">
 					<span className="card-title">Notificaciones</span>
-					<ul className="collection toggle-base">
+					<ul className="collection ">
 					{notifications && notifications.map((item)=>{
 						return (
 							<li className="collection-item avatar toggle-enter"  key={item.id}>

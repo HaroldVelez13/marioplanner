@@ -4,8 +4,8 @@ import luigi from '../../luigi.gif';
 
 const ProjectSummary = ({project}) => {
 	return(
-		<div className="card z-depth-0 project-summary">		
-	      	<div className="card-content grey-text text-darken-3">
+		<div className="card z-depth-0 project-summary toggle-base">		
+	      	<div className="card-content grey-text text-darken-3 toggle-enter">
 				<div className="row valign-wrapper">
 				    <div className="col s2">	      
 			            <img src={luigi} alt="Cara de Luigi" className="circle responsive-img" />
