@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Proyect Mario PLanner
+
+##React project with Firebase, redux and materializa.cs
+
+##Show [demo](https://hyde-project-mario-plan.web.app/)
 
 ## Available Scripts
 
