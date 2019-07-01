@@ -1,0 +1,90 @@
+ 
+html{
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: url(/img/mario-bg.png) no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  background-color: #95e8f3;
+  min-height: 100%;
+}
+
+form{
+  padding: 20px;
+  margin-top: 60px;
+}
+
+form button, form h5{
+  margin: 20px 0;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color: #ec407a;
+  box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+  color: #ec407a !important;
+}
+
+
+.collection {
+    border: 0px solid #e0e0e0 !important;
+}
+
+.toggle-base {
+  position: relative;
+}
+
+.toggle-enter {
+  animation-name: fade-in;
+  animation-duration: 1500ms;
+}
+/*.toggle-leave {
+  animation-name: fade-out;
+  animation-duration: 300ms;
+}*/
+
+@keyframes fade-in {
+  0% {
+    background-color: rgb(235, 250, 250,.5);
+    opacity: 0.0;
+    height: 0px;
+  }
+  60% {
+    background-color: rgb(235, 250, 250,.7);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1.0;
+    height: 100%;
+  }
+}
+
+
+@keyframes fade-out {
+  from {
+    opacity: 1.0;
+  }
+  to {;
+    opacity: 0.0;
+    height: 0px;
+  }
+}
+
+
+.route-wrapper {
+  position: relative;
+}
+

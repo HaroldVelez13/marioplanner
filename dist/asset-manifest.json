@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.095046e0.chunk.css",
+    "main.js": "/static/js/main.9dcc60fe.chunk.js",
+    "main.js.map": "/static/js/main.9dcc60fe.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.ad9eb4b5.chunk.css": "/static/css/2.ad9eb4b5.chunk.css",
+    "static/js/2.8879321b.chunk.js": "/static/js/2.8879321b.chunk.js",
+    "static/js/2.8879321b.chunk.js.map": "/static/js/2.8879321b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.85346f9528eb4265f1ebcd08270eace5.js": "/precache-manifest.85346f9528eb4265f1ebcd08270eace5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.ad9eb4b5.chunk.css.map": "/static/css/2.ad9eb4b5.chunk.css.map",
+    "static/css/main.095046e0.chunk.css.map": "/static/css/main.095046e0.chunk.css.map",
+    "static/media/fungus.gif": "/static/media/fungus.0261f6cd.gif",
+    "static/media/luigi.gif": "/static/media/luigi.8f7d5a9d.gif"
+  }
+}
