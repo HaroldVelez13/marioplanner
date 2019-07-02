@@ -15,11 +15,9 @@ class ProjectDetail extends Component {
     	}
 	    this.handleClick = this.handleClick.bind(this);
 	}	
-	handleClick = (e) => {
-		console.log(this.props);
+	handleClick = (e) => {		
 		e.preventDefault();
 		let projectId = this.props.projectId;
-		console.log(projectId);
 		this.props.deleteProject(projectId);
 		this.setState({closeModal:true});
 	}
