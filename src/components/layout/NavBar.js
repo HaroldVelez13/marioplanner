@@ -4,6 +4,8 @@ import SignedOutLinks from './SignedOutLinks';
 import { connect } from 'react-redux';
 import BoxMario from '../mario/BoxMario';
 
+
+
 const NavBar = (props) => {
 	const { auth, profile } = props;
 	const links = auth.uid ? <SignedInLinks profile={profile}/> :	<SignedOutLinks/>;

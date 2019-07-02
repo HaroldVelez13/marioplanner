@@ -1,3 +1,10 @@
+const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+const LOGIN_ERROR = 'LOGIN_ERROR';
+const SIGNOUT_SUCCESS = 'SIGNOUT_SUCCESS';
+const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
+const SIGNUP_ERROR = 'SIGNUP_ERROR';
+
+
 export const signIn = (credentials) => {
 	return (dispatch, getState, {getFirebase}) => {
 		const firebase = getFirebase();
@@ -5,9 +12,9 @@ export const signIn = (credentials) => {
 			credentials.email,
 			credentials.password
 		).then( ()=>{
-			dispatch({type:'LOGIN_SUCCESS'});
+			dispatch({type:LOGIN_SUCCESS});
 		}).catch( (err)=> {
-			dispatch({type:'LOGIN_ERROR',err});
+			dispatch({type:LOGIN_ERROR,err});
 
 		});
 	}	
@@ -19,7 +26,7 @@ export const signOut = () => {
 		const firebase = getFirebase();
 		firebase.logout()
 		.then( () => {
-			dispatch({ type:'SIGNOUT_SUCCESS' });			
+			dispatch({ type:SIGNOUT_SUCCESS });			
 		})
 	}
 }
@@ -40,10 +47,10 @@ export const signUp = (newUser) => {
 			})			
 		})
 		.then( ()=> {
-			dispatch({ type:'SIGNUP_SUCCESS' });
+			dispatch({ type:SIGNUP_SUCCESS });
 		})
 		.catch( err=> {
-			dispatch({ type:'SIGNUP_ERROR',err });
+			dispatch({ type:SIGNUP_ERROR, err });
 		})
 	}
 }

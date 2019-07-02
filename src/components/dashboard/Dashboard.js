@@ -8,7 +8,7 @@ import { Redirect } from 'react-router-dom';
 import { showProjects } from '../../store/actions/projectActions';
 
 class Dashboard extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.showProjects();
   }
   render(){

@@ -84,7 +84,3 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label{
 }
 
 
-.route-wrapper {
-  position: relative;
-}
-

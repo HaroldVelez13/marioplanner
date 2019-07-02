@@ -6,7 +6,7 @@ const Notifications = (props) => {
 	const {notifications} = props;
 	return(
 		<div className="section toggle-base">
-			<div className="card zdepth-0">
+			<div className="card z-depth-1">
 				<div className="card-content">
 					<span className="card-title">Notificaciones</span>
 					<ul className="collection ">
@@ -19,7 +19,7 @@ const Notifications = (props) => {
 								<div className="grey-text note-date">
 									{moment(item.time.toDate()).fromNow()}
 								</div>									
-							</li>						    
+							</li>					    
 						)
 					})}
 					</ul>

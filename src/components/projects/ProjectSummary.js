@@ -4,7 +4,7 @@ import luigi from '../../luigi.gif';
 
 const ProjectSummary = ({project}) => {
 	return(
-		<div className="card z-depth-0 project-summary toggle-base">		
+		<div className="card z-depth-2 project-summary toggle-base">		
 	      	<div className="card-content grey-text text-darken-3 toggle-enter">
 				<div className="row valign-wrapper">
 				    <div className="col s2">	      
