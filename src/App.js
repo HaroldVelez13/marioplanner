@@ -29,7 +29,7 @@ const App = () => {
                       {({ match }) => (
                         <CSSTransition
                           in={match != null}
-                          timeout={300}
+                          timeout={600}
                           classNames="page"
                           unmountOnExit
                         >
