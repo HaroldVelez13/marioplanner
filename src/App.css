@@ -3,7 +3,7 @@
 }
 
 .page {
-  position: absolute;
+  position: relative;
   left: 1px;
   right: 1px;
 }

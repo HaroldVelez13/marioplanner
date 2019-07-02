@@ -5,49 +5,52 @@ import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
 import moment from '../../config/moment';
 import { deleteProject } from '../../store/actions/projectActions';
-
-
+import  ModalWrapper  from '../modalWrapper/ModalWrapper';
 
 class ProjectDetail extends Component {
-	
+	constructor(props) {
+    	super(props);
+    	this.state = {
+    		closeModal:false
+    	}
+	    this.handleClick = this.handleClick.bind(this);
+	}	
 	handleClick = (e) => {
+		console.log(this.props);
 		e.preventDefault();
 		let projectId = this.props.projectId;
 		console.log(projectId);
 		this.props.deleteProject(projectId);
+		this.setState({closeModal:true});
+	}
+	handleClose = () => {
 		this.props.history.push('/');
 	}
 	render(){	
 		if (!this.props.auth.uid) return <Redirect to="/ingresar" />
 		if ( this.props.project ){
-			return (
-				<div className="container section project-detail">
+		return (
+			<ModalWrapper onClose={this.handleClose} close={this.state.closeModal}>	
 		    	<div className="card z-depth-0">
 			    	<div className="card-content">
-				    	<div className="row">
-				    		{ this.props.project.authorId === this.props.auth.uid
-				    		?(
-					    		<div className="col s1 push-s11">
-					    		<button className="btn-floating btn-small waves-effect waves-dark white " title="Eliminar Proyecto" onClick={this.handleClick}>
-					    		<i className="material-icons red-text">close</i>
-					    		</button>
-					    		</div>
-					    	)
-					    	: null
-				    		}
-			    		</div>
 			    		<span className="card-title">{ this.props.project.title }</span>
 			    		<p> { this.props.project.content } </p>
-
 			    	</div>
 			    	<div className="card-action  grey lighten-5 grey-text">
 			    		<div>Creado Por : {this.props.project.authorFirstName} {this.props.project.authorLastName}</div>
 			    		<div>{moment(this.props.project.createdAt.toDate()).calendar()}</div>
 			    	</div>
-		    	</div>
-		    </div>
-	    )
-		}else{
+			    	{this.props.project.authorId === this.props.auth.uid
+		    		?(
+			    		<div className="card-action center">
+							<button className="btn red lighten-2 z-depth-0" onClick={this.handleClick}>Eliminar</button>					    		
+				    	</div>
+			    	)
+			    	: null
+			    	}
+			    </div>
+			</ModalWrapper>
+    	)}else{
 			return(
 				<div className="conteiner center">
 					<p>Cargando Projecto</p>
